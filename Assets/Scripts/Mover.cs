@@ -31,7 +31,7 @@ public class Mover : MonoBehaviour
     {
         Vector3 velocity = GetComponent<NavMeshAgent>().velocity;
         Vector3 localVelocity = transform.InverseTransformDirection(velocity);
-        float speed = localVelocity.z;
+        float speed = Mathf.Abs(localVelocity.z);
         GetComponent<Animator>().SetFloat("forwardSpeed", speed);
     }
 }

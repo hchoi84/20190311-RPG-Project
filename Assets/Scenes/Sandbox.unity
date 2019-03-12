@@ -108,7 +108,7 @@ NavMeshSettings:
     cellSize: 0.25
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 661df955654101148b1011bc2944f971, type: 2}
@@ -3468,7 +3468,7 @@ PrefabInstance:
     - target: {fileID: 2125533939428173080, guid: c583cb26aaf3d5f4e96d903bfd9b04cc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.699
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2125533939428173080, guid: c583cb26aaf3d5f4e96d903bfd9b04cc,
         type: 3}
@@ -3515,11 +3515,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8845159943038695788, guid: c583cb26aaf3d5f4e96d903bfd9b04cc,
-        type: 3}
-      propertyPath: m_Height
-      value: 1.91
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c583cb26aaf3d5f4e96d903bfd9b04cc, type: 3}
 --- !u!1001 &414758347461859179
@@ -3537,12 +3532,12 @@ PrefabInstance:
     - target: {fileID: 414758349349737959, guid: e226c52c028f13444911c94b62393618,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.64
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 414758349349737959, guid: e226c52c028f13444911c94b62393618,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.42
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 414758349349737959, guid: e226c52c028f13444911c94b62393618,
         type: 3}
