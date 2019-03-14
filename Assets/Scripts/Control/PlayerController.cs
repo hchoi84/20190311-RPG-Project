@@ -6,13 +6,6 @@ namespace RPG.Control
 {
     public class PlayerController : MonoBehaviour
     {
-        private Mover mover = default;
-
-        private void Start()
-        {
-            mover = GetComponent<Mover>();
-        }
-
         private void Update()
         {
             if (InteractWithCombat()) return;
@@ -44,7 +37,7 @@ namespace RPG.Control
             {
                 if (hasHit)
                 {
-                    mover.StartMoveAction(hit.point);
+                    GetComponent<Mover>().StartMoveAction(hit.point);
                 }
             }
             return hasHit;

@@ -4,6 +4,7 @@ using RPG.Movement;
 
 namespace RPG.Combat
 {
+    //Note that you can inherent from many interfaces
     public class Fighter : MonoBehaviour, IAction
     {
         [SerializeField]
@@ -20,7 +21,13 @@ namespace RPG.Combat
             else
             {
                 GetComponent<Mover>().Cancel();
+                AttackBehaviour();
             }
+        }
+
+        private void AttackBehaviour()
+        {
+            GetComponent<Animator>().SetTrigger("attack");
         }
 
         private bool GetIsInRange()
@@ -37,6 +44,12 @@ namespace RPG.Combat
         public void Cancel()
         {
             target = null;
+        }
+
+        //Animation event
+        private void Hit()
+        {
+
         }
     }
 }

@@ -4,6 +4,7 @@ using RPG.Core;
 
 namespace RPG.Movement
 {
+    //Note that you can inherent from many interfaces
     public class Mover : MonoBehaviour, IAction
     {
         private NavMeshAgent myNavMeshAgent = default;
@@ -34,7 +35,6 @@ namespace RPG.Movement
         {
             myNavMeshAgent.isStopped = true;
         }
-
 
         private void UpdateAnimator()
         {
