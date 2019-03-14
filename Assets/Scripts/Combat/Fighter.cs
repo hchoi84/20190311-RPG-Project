@@ -35,6 +35,7 @@ namespace RPG.Combat
 
         private void AttackBehaviour()
         {
+            if (target.GetComponent<Health>().isCharDead()) { Cancel(); return; }
             if (timeSinceLastAttack > timeBetweenAttacks)
             {
                 //This will trigger Hit() via Animation

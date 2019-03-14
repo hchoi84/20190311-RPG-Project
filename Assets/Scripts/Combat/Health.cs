@@ -1,20 +1,35 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.AI;
 
 namespace RPG.Combat
 {
     public class Health : MonoBehaviour
     {
         [SerializeField]
-        private float health = 100f;
+        private float healthPoints = 100f;
+        private bool isDead = false;
 
         public void TakeDamage(float damage)
         {
-            health = Mathf.Max(health - damage, 0);
-            if (health <= 0)
+            healthPoints = Mathf.Max(healthPoints - damage, 0);
+            if (healthPoints == 0)
             {
-                Destroy(gameObject);
+                Die();
             }
+        }
+
+        private void Die()
+        {
+            if (isDead) { return; }
+            isDead = true;
+            GetComponent<Animator>().SetTrigger("die");
+            GetComponent<NavMeshAgent>().enabled = false;
+            GetComponent<CapsuleCollider>().enabled = false;
+        }
+
+        public bool isCharDead()
+        {
+            return isDead;
         }
     }
 }
