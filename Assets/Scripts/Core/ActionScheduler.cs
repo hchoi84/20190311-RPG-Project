@@ -4,16 +4,16 @@ namespace RPG.Core
 {
     public class ActionScheduler : MonoBehaviour
     {
-        private MonoBehaviour currentAction = default;
+        private IAction currentAction = default;
 
-        public void StartAction(MonoBehaviour action)
+        public void StartAction(IAction action)
         {
             if(currentAction == action) { return; }
             if (currentAction != null)
             {
-                print("Cancelling" + currentAction);
-                currentAction = action;
+                currentAction.Cancel();
             }
+            currentAction = action;
         }
     }
 }
