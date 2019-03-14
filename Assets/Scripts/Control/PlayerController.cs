@@ -44,8 +44,7 @@ namespace RPG.Control
             {
                 if (hasHit)
                 {
-                    GetComponent<Fighter>().Cancel();
-                    mover.MoveTo(hit.point);
+                    mover.StartMoveAction(hit.point);
                 }
             }
             return hasHit;
